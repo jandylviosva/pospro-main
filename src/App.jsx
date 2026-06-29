@@ -405,7 +405,7 @@ export default function App() {
       {/* NAV */}
       <nav>
         <NavLogo/>
-        <div className="nav-links" style={menuOpen ? {display:'flex',flexDirection:'column',position:'fixed',top:97,left:0,right:0,background:'rgba(15,22,41,.98)',padding:'20px 5vw 24px',gap:18,zIndex:99,borderBottom:'1px solid rgba(255,255,255,.07)'} : {}}>
+        <div className="nav-links" style={menuOpen ? {display:'flex',flexDirection:'column',position:'fixed',top:64,left:0,right:0,background:'rgba(15,22,41,.98)',padding:'20px 5vw 24px',gap:18,zIndex:99,borderBottom:'1px solid rgba(255,255,255,.07)'} : {}}>
           <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
           <a href="#how" onClick={() => setMenuOpen(false)}>How It Works</a>
           <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
