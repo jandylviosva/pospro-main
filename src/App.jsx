@@ -420,7 +420,7 @@ export default function App() {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-eyebrow"><i className="ti ti-bolt"/> Built for Filipino stores</div>
-          <h1>Run Your Store.<br/><em>Not Your Software.</em></h1>
+          <h1>Mas Mabilis Magbenta,<br/><em>Mas Mabilis Kumita.</em></h1>
           <div className="hero-price-hook">
             <div className="hero-price-main">
               <span className="hero-price-currency">₱</span>
