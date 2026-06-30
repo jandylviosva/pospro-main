@@ -451,12 +451,12 @@ export default function App() {
                   <div className="mockup-logo-icon" style={{background:MOCKUP_ACCENT}}>
                     <ProductThumb src={MOCKUP_LOGO} fallback="🍔"/>
                   </div>
-                  <div className="mockup-store">Baga Burger Malaria<span>POS Pro</span></div>
+                  <div className="mockup-store">BAGA BURGER MALARIA<span>POS Pro</span></div>
                 </div>
                 <div className="mockup-sync"><div className="mockup-sync-dot"/><span className="mockup-sync-text">Synced</span></div>
               </div>
               <div className="mockup-cats">
-                {['All','Beef Burger','Chicken Crunch','Drinks'].map((c,i) => <div key={c} className={`mockup-cat${i===0?' active':''}`}>{c}</div>)}
+                {['All','BEEF BURGER','CHICKEN CRUNCH','DRINKS'].map((c,i) => <div key={c} className={`mockup-cat${i===0?' active':''}`}>{c}</div>)}
               </div>
               <div className="mockup-products">
                 {MOCKUP_PRODUCTS.map(p => (
