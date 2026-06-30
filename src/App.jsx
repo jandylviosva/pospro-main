@@ -18,13 +18,9 @@ const css = `
   }
   html{scroll-behavior:smooth}
   body{font-family:var(--font);color:var(--text);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
-
-  /* ANNOUNCE */
   .announce-bar{background:linear-gradient(90deg,var(--p-dark),var(--p));padding:9px 5vw;text-align:center;font-size:13px;font-weight:600;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px}
   @keyframes pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.4);opacity:.5}}
   .pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;opacity:.9;animation:pulse 2s ease infinite}
-
-  /* NAV */
   nav{position:sticky;top:0;z-index:100;background:rgba(15,22,41,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);padding:0 5vw;height:64px;display:flex;align-items:center;justify-content:space-between}
   .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
   .nav-logo-icon{width:36px;height:36px;border-radius:9px;overflow:hidden;flex-shrink:0}
@@ -39,8 +35,6 @@ const css = `
   .nav-cta{background:var(--p);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;transition:background .15s,transform .1s;box-shadow:0 2px 10px var(--p-glow)}
   .nav-cta:hover{background:var(--p-dark);transform:translateY(-1px)}
   .nav-hamburger{display:none;background:none;border:none;cursor:pointer;color:#fff;font-size:22px}
-
-  /* HERO */
   .hero{background:var(--navy);padding:72px 5vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;min-height:calc(100vh - 100px);position:relative;overflow:hidden}
   .hero::before{content:'';position:absolute;top:-160px;right:-160px;width:560px;height:560px;background:radial-gradient(circle,rgba(79,70,229,.2) 0%,transparent 68%);pointer-events:none}
   .hero-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(79,70,229,.15);border:1px solid rgba(129,140,248,.35);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;color:var(--p-light);margin-bottom:18px}
@@ -57,16 +51,12 @@ const css = `
   .hero-price-perk i{color:var(--green);font-size:12px}
   .hero-sub{font-size:16px;color:rgba(255,255,255,.55);margin-bottom:30px;max-width:460px;line-height:1.75}
   .hero-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
-
-  /* BUTTONS */
   .btn-primary{background:var(--p);color:#fff;padding:14px 26px;border-radius:10px;font-size:15px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .15s,transform .12s,box-shadow .15s;box-shadow:0 4px 20px var(--p-glow);border:none;cursor:pointer;font-family:var(--font)}
   .btn-primary:hover{background:var(--p-dark);transform:translateY(-2px);box-shadow:0 8px 28px var(--p-glow)}
   .btn-ghost{color:rgba(255,255,255,.75);padding:14px 22px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.14);border-radius:10px;transition:border-color .15s,color .15s,background .15s}
   .btn-ghost:hover{border-color:rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.05)}
   .btn-white{background:#fff;color:var(--p);padding:15px 32px;border-radius:10px;font-size:15px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 28px rgba(0,0,0,.25);transition:transform .12s,box-shadow .15s;border:none;cursor:pointer;font-family:var(--font)}
   .btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.3)}
-
-  /* MOCKUP */
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
   .mockup-wrap{position:relative}
   .mockup-phone{background:#fff;border-radius:22px;box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06);overflow:hidden;max-width:330px;margin:0 auto;animation:float 5s ease-in-out infinite}
@@ -81,50 +71,43 @@ const css = `
   .mockup-sync-text{font-size:9px;color:rgba(255,255,255,.4)}
   .mockup-cats{display:flex;gap:5px;padding:7px 10px;background:#f5f5ff;border-bottom:1px solid #e5e7eb;overflow-x:auto;scrollbar-width:none}
   .mockup-cat{padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700;background:#e5e7eb;color:#6b7280;white-space:nowrap}
-  .mockup-cat.active{background:var(--p);color:#fff}
+  .mockup-cat.active{background:var(--mockup-accent, var(--p));color:#fff}
   .mockup-products{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;padding:7px;background:#f0f0f8}
   .mockup-product{background:#fff;border-radius:8px;padding:6px 4px;text-align:center;border:1.5px solid #e5e7eb;font-size:8px}
-  .mockup-product.active{border-color:var(--p)}
-  .mockup-prod-img{width:30px;height:30px;border-radius:5px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;margin:0 auto 3px;font-size:14px}
+  .mockup-product.active{border-color:var(--mockup-accent, var(--p))}
+  .mockup-prod-img{width:30px;height:30px;border-radius:5px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;margin:0 auto 3px;font-size:14px;overflow:hidden}
+  .mockup-prod-img img{width:100%;height:100%;object-fit:cover}
   .mockup-prod-name{font-weight:700;color:#111;line-height:1.2;margin-bottom:1px}
-  .mockup-prod-price{color:var(--p);font-weight:800}
+  .mockup-prod-price{color:var(--mockup-accent, var(--p));font-weight:800}
   .mockup-prod-stock{color:#9ca3af;font-size:7px}
   .mockup-cart{background:#fff;border-top:1px solid #e5e7eb;padding:9px}
   .mockup-cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
   .mockup-cart-title{font-size:11px;font-weight:800}
-  .mockup-cart-badge{background:var(--p);color:#fff;border-radius:10px;padding:1px 6px;font-size:8px;font-weight:800}
+  .mockup-cart-badge{background:var(--mockup-accent, var(--p));color:#fff;border-radius:10px;padding:1px 6px;font-size:8px;font-weight:800}
   .mockup-cart-item{display:flex;justify-content:space-between;align-items:center;font-size:9px;padding:3px 0;color:#374151;border-bottom:.5px solid #f3f4f6}
   .mockup-total-row{display:flex;justify-content:space-between;font-size:12px;font-weight:800;padding-top:6px;margin-top:3px;border-top:1px dashed #e5e7eb}
-  .mockup-total-row span:last-child{color:var(--p)}
-  .mockup-charge-btn{width:100%;margin-top:7px;background:var(--p);color:#fff;border:none;border-radius:8px;padding:9px;font-size:11px;font-weight:800;cursor:pointer}
+  .mockup-total-row span:last-child{color:var(--mockup-accent, var(--p))}
+  .mockup-charge-btn{width:100%;margin-top:7px;background:var(--mockup-accent, var(--p));color:#fff;border:none;border-radius:8px;padding:9px;font-size:11px;font-weight:800;cursor:pointer}
   .mockup-badge{position:absolute;background:#fff;border-radius:10px;padding:8px 11px;box-shadow:0 8px 24px rgba(0,0,0,.14);font-size:11px;font-weight:700;display:flex;align-items:center;gap:6px;white-space:nowrap;animation:float 5s ease-in-out infinite}
   .mockup-badge i{font-size:14px}
   .badge-gcash{top:36px;right:-32px;color:#007bff;animation-delay:.6s}
   .badge-sync{bottom:130px;left:-44px;color:var(--green);animation-delay:1.2s}
   .badge-sale{bottom:48px;right:-28px;color:var(--p);animation-delay:1.8s}
-
-  /* STATS */
   .stats{background:var(--navy2);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:0 5vw;display:grid;grid-template-columns:repeat(4,1fr)}
   .stat{text-align:center;padding:32px 16px;border-right:1px solid rgba(255,255,255,.06)}
   .stat:last-child{border-right:none}
   .stat-num{font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:5px}
   .stat-num .accent{color:var(--p-light)}
   .stat-label{font-size:12px;color:rgba(255,255,255,.38);font-weight:500;line-height:1.4}
-
-  /* VALUE STRIP */
   .value-strip{background:linear-gradient(135deg,#f5f3ff,#ede9fe);border-bottom:1px solid #ddd6fe;padding:18px 5vw;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
   .value-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#4338ca}
   .value-item i{font-size:16px;color:var(--p)}
-
-  /* SECTIONS */
   section{padding:80px 5vw}
   .section-eyebrow{font-size:11px;font-weight:800;color:var(--p);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
   .section-title{font-size:clamp(24px,3.2vw,38px);font-weight:900;letter-spacing:-.8px;line-height:1.15;color:var(--text);margin-bottom:12px}
   .section-sub{font-size:15px;color:var(--gray);max-width:520px;line-height:1.75;margin-bottom:48px}
   .section-center{text-align:center}
   .section-center .section-sub{margin-left:auto;margin-right:auto}
-
-  /* FEATURES */
   .features{background:var(--off)}
   .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
   .feature-card{background:#fff;border-radius:14px;padding:26px;border:1px solid var(--border);transition:box-shadow .22s,transform .22s,border-color .22s;cursor:default}
@@ -134,8 +117,6 @@ const css = `
   .feature-card p{font-size:13px;color:var(--gray);line-height:1.7}
   .feature-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
   .feature-tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;background:#f5f5ff;color:#6366f1;border:1px solid #e0e7ff}
-
-  /* HOW */
   .how{background:#fff}
   .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;position:relative}
   .how-steps::before{content:'';position:absolute;top:28px;left:calc(16.67% + 24px);right:calc(16.67% + 24px);height:2px;background:linear-gradient(90deg,var(--p),var(--p-light));opacity:.2}
@@ -143,8 +124,6 @@ const css = `
   .how-step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p-dark));color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 8px 24px var(--p-glow)}
   .how-step h3{font-size:15px;font-weight:800;margin-bottom:7px}
   .how-step p{font-size:13px;color:var(--gray);line-height:1.7}
-
-  /* PAYMENTS */
   .payments{background:var(--navy);padding:60px 5vw;text-align:center}
   .payments h2{font-size:clamp(20px,3vw,32px);font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.5px}
   .payments p{color:rgba(255,255,255,.45);font-size:14px;margin-bottom:32px}
@@ -157,8 +136,6 @@ const css = `
   .pill-maya i{color:#a78bfa}
   .pill-card i{color:#f59e0b}
   .pill-qr i{color:#34d399}
-
-  /* PRICING */
   .pricing{background:var(--off);padding:80px 5vw}
   .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:860px;margin:0 auto}
   .pricing-card{background:#fff;border-radius:18px;padding:36px 30px;border:2px solid var(--border);position:relative;transition:box-shadow .22s}
@@ -191,8 +168,6 @@ const css = `
   .addon-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
   .addon-price{font-size:13px;font-weight:800;color:var(--p);margin-bottom:3px}
   .addon-desc{font-size:11px;color:var(--gray)}
-
-  /* TESTIMONIALS */
   .testimonials{background:#fff}
   .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
   .testi-card{background:var(--off);border-radius:14px;padding:24px;border:1px solid var(--border);transition:box-shadow .2s,transform .2s}
@@ -204,8 +179,6 @@ const css = `
   .testi-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;flex-shrink:0}
   .testi-name{font-size:13px;font-weight:700;color:var(--text)}
   .testi-biz{font-size:11px;color:var(--gray)}
-
-  /* FAQ */
   .faq{background:var(--off)}
   .faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:4px}
   .faq-item{background:#fff;border-radius:10px;border:1px solid var(--border);overflow:hidden;transition:box-shadow .2s}
@@ -216,16 +189,12 @@ const css = `
   .faq-item.open .faq-q i{transform:rotate(45deg)}
   .faq-a{font-size:13px;color:var(--gray);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .2s;padding:0 20px}
   .faq-item.open .faq-a{max-height:300px;padding:0 20px 17px}
-
-  /* CTA BANNER */
   .cta-banner{background:linear-gradient(135deg,#2e1065,var(--p-dark),var(--p));padding:84px 5vw;text-align:center;position:relative;overflow:hidden}
   .cta-banner h2{font-size:clamp(24px,4vw,42px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:12px}
   .cta-banner p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:10px;max-width:440px;margin-left:auto;margin-right:auto}
   .cta-price-callout{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 20px;margin-bottom:28px;font-size:15px;font-weight:700;color:rgba(255,255,255,.85)}
   .cta-price-callout strong{color:#fff;font-size:18px}
   .cta-guarantee{font-size:12px;color:rgba(255,255,255,.4);margin-top:16px}
-
-  /* FOOTER */
   footer{background:var(--navy);padding:56px 5vw 28px}
   .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07)}
   .footer-brand p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.75;margin-top:12px;max-width:240px}
@@ -237,8 +206,6 @@ const css = `
   .footer-bottom-links{display:flex;gap:18px}
   .footer-bottom-links a{font-size:12px;color:rgba(255,255,255,.25);text-decoration:none;transition:color .15s}
   .footer-bottom-links a:hover{color:rgba(255,255,255,.55)}
-
-  /* MODAL */
   .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
   .modal-overlay.open{display:flex}
   @keyframes modalIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
@@ -255,8 +222,6 @@ const css = `
   .modal-note{text-align:center;font-size:12px;color:var(--gray-light);margin-top:12px;display:flex;align-items:center;justify-content:center;gap:5px}
   .modal-note i{color:var(--green);font-size:13px}
   .modal-success{text-align:center;padding:10px 0}
-
-  /* RESPONSIVE */
   @media(max-width:960px){
     .hero{grid-template-columns:1fr;padding:64px 5vw 60px;min-height:auto;text-align:center;gap:44px}
     .hero-sub{margin:0 auto 28px}
@@ -292,6 +257,40 @@ const css = `
 `;
 
 const LOGO = '/icons/icon-192.png';
+
+/* ── CLIENT MOCKUP BRANDING ──
+   Baga Burger Malaria uses red (#f90b0b) as their POS theme color.
+   This only affects the hero mockup phone — not the rest of the landing page.
+   Replace MOCKUP_LOGO with their real logo once uploaded, e.g.:
+   const MOCKUP_LOGO = '/images/clients/baga-burger-logo.png';
+*/
+const MOCKUP_ACCENT = '#f90b0b';
+const MOCKUP_LOGO = '/images/clients/baga-burger-logo.png'; // ← replace with real logo file
+
+/* ── HERO MOCKUP PRODUCT DATA ──
+   Real client store: Baga Burger Malaria
+   Placeholder images below — replace src paths with real product photos.
+   1. Drop real images into the repo at: public/images/products/
+   2. Use these exact filenames (or update the paths below to match yours):
+      beefy-baga.jpg, cheesy-bacon-baga.jpg, chicken-crunch.jpg,
+      hotdog-sandwich.jpg, longganiza-burger.jpg, coke.jpg
+   Until those files exist, each thumbnail safely falls back to a 🍔 emoji
+   (handled by the ProductThumb component below via onError).
+*/
+const MOCKUP_PRODUCTS = [
+  { img: '/images/products/beefy-baga.jpg',        name: 'Beefy Baga',         price: '₱45',  stock: 89,  active: true  },
+  { img: '/images/products/cheesy-bacon-baga.jpg', name: 'Cheesy Bacon Baga',  price: '₱87',  stock: 89,  active: false },
+  { img: '/images/products/chicken-crunch.jpg',    name: 'Chicken Crunch',     price: '₱50',  stock: 48,  active: true  },
+  { img: '/images/products/hotdog-sandwich.jpg',   name: 'Hotdog Sandwich',    price: '₱45',  stock: 50,  active: false },
+  { img: '/images/products/longganiza-burger.jpg', name: 'Longganiza Burger',  price: '₱45',  stock: 75,  active: false },
+  { img: '/images/products/coke.jpg',              name: 'Coke',               price: '₱25',  stock: 100, active: false },
+];
+
+function ProductThumb({ src, fallback }) {
+  const [errored, setErrored] = useState(false);
+  if (errored || !src) return <span>{fallback}</span>;
+  return <img src={src} alt="" onError={() => setErrored(true)}/>;
+}
 
 function NavLogo() {
   return (
@@ -395,14 +394,12 @@ export default function App() {
     <>
       <style>{css}</style>
 
-      {/* ANNOUNCE */}
       <div className="announce-bar">
         <span className="pulse"/>
         <span><strong>3-day free trial</strong> — No credit card. No commitment. Full access.</span>
         <span className="pulse"/>
       </div>
 
-      {/* NAV */}
       <nav>
         <NavLogo/>
         <div className="nav-links" style={menuOpen ? {display:'flex',flexDirection:'column',position:'fixed',top:64,left:0,right:0,background:'rgba(15,22,41,.98)',padding:'20px 5vw 24px',gap:18,zIndex:99,borderBottom:'1px solid rgba(255,255,255,.07)'} : {}}>
@@ -420,7 +417,6 @@ export default function App() {
         </button>
       </nav>
 
-      {/* HERO */}
       <section className="hero">
         <div className="hero-content">
           <div className="hero-eyebrow"><i className="ti ti-bolt"/> Built for Filipino stores</div>
@@ -449,24 +445,28 @@ export default function App() {
             <div className="mockup-badge badge-gcash"><i className="ti ti-brand-google-pay"/>GCash accepted</div>
             <div className="mockup-badge badge-sync"><i className="ti ti-cloud-check"/>Cloud synced</div>
             <div className="mockup-badge badge-sale"><i className="ti ti-chart-bar"/>₱12,450 today</div>
-            <div className="mockup-phone">
+            <div className="mockup-phone" style={{'--mockup-accent': MOCKUP_ACCENT}}>
               <div className="mockup-topbar">
                 <div className="mockup-logo">
-                  <div className="mockup-logo-icon"><img src={LOGO} alt="POS Pro"/></div>
-                  <div className="mockup-store">Daly's Foodhub<span>POS Pro</span></div>
+                  <div className="mockup-logo-icon" style={{background:MOCKUP_ACCENT}}>
+                    <ProductThumb src={MOCKUP_LOGO} fallback="🍔"/>
+                  </div>
+                  <div className="mockup-store">Baga Burger Malaria<span>POS Pro</span></div>
                 </div>
                 <div className="mockup-sync"><div className="mockup-sync-dot"/><span className="mockup-sync-text">Synced</span></div>
               </div>
               <div className="mockup-cats">
-                {['All','Food','Drinks','Desserts'].map((c,i) => <div key={c} className={`mockup-cat${i===0?' active':''}`}>{c}</div>)}
+                {['All','Beef Burger','Chicken Crunch','Drinks'].map((c,i) => <div key={c} className={`mockup-cat${i===0?' active':''}`}>{c}</div>)}
               </div>
               <div className="mockup-products">
-                {[{e:'🍗',n:'Chicken Adobo',p:'₱120',s:32,a:true},{e:'🍜',n:'Pancit Canton',p:'₱100',s:18},{e:'🧋',n:'Iced Coffee',p:'₱65',s:45,a:true},{e:'🍮',n:'Leche Flan',p:'₱75',s:12},{e:'🥤',n:'Coke 500ml',p:'₱35',s:60},{e:'🍱',n:'Bento Box',p:'₱180',s:8}].map(p => (
-                  <div key={p.n} className={`mockup-product${p.a?' active':''}`}>
-                    <div className="mockup-prod-img">{p.e}</div>
-                    <div className="mockup-prod-name">{p.n}</div>
-                    <div className="mockup-prod-price">{p.p}</div>
-                    <div className="mockup-prod-stock">Stock: {p.s}</div>
+                {MOCKUP_PRODUCTS.map(p => (
+                  <div key={p.name} className={`mockup-product${p.active?' active':''}`}>
+                    <div className="mockup-prod-img">
+                      <ProductThumb src={p.img} fallback="🍔"/>
+                    </div>
+                    <div className="mockup-prod-name">{p.name}</div>
+                    <div className="mockup-prod-price">{p.price}</div>
+                    <div className="mockup-prod-stock">Stock: {p.stock}</div>
                   </div>
                 ))}
               </div>
@@ -474,17 +474,16 @@ export default function App() {
                 <div className="mockup-cart-header">
                   <div className="mockup-cart-title">Order <span className="mockup-cart-badge">2</span></div>
                 </div>
-                <div className="mockup-cart-item"><span>Chicken Adobo ×1</span><span style={{fontWeight:800}}>₱120</span></div>
-                <div className="mockup-cart-item"><span>Iced Coffee ×2</span><span style={{fontWeight:800}}>₱130</span></div>
-                <div className="mockup-total-row"><span>Total</span><span>₱250.00</span></div>
-                <button className="mockup-charge-btn">Charge ₱250.00</button>
+                <div className="mockup-cart-item"><span>Beefy Baga ×1</span><span style={{fontWeight:800}}>₱45</span></div>
+                <div className="mockup-cart-item"><span>Chicken Crunch ×2</span><span style={{fontWeight:800}}>₱100</span></div>
+                <div className="mockup-total-row"><span>Total</span><span>₱145.00</span></div>
+                <button className="mockup-charge-btn">Charge ₱145.00</button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* STATS */}
       <div className="stats">
         {[{n:'₱399',a:'',l:'Per month · all features'},{n:'3',a:'-day',l:'Free trial · no card needed'},{n:'5',a:'+',l:'Payment methods accepted'},{n:'',a:'∞',l:'Products, orders & staff'}].map((s,i) => (
           <div key={i} className="stat">
@@ -494,14 +493,12 @@ export default function App() {
         ))}
       </div>
 
-      {/* VALUE STRIP */}
       <div className="value-strip">
         {[['ti-wifi-off','Works offline'],['ti-cloud-upload','Cloud backup'],['ti-device-mobile','Any phone or tablet'],['ti-shield-check','BIR VAT-ready'],['ti-clock','Setup in minutes']].map(([icon,label]) => (
           <div key={label} className="value-item"><i className={`ti ${icon}`}/>{label}</div>
         ))}
       </div>
 
-      {/* FEATURES */}
       <section className="features" id="features">
         <div className="section-center" style={{marginBottom:44}}>
           <div className="section-eyebrow">Everything you need</div>
@@ -530,7 +527,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
       <section className="how" id="how">
         <div className="section-center" style={{marginBottom:56}}>
           <div className="section-eyebrow">Getting started</div>
@@ -552,7 +548,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* PAYMENTS */}
       <div className="payments">
         <h2>Accepts all the ways Filipinos pay</h2>
         <p>Built-in QR Ph P2P — GCash and Maya ready out of the box</p>
@@ -563,7 +558,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* PRICING */}
       <section className="pricing" id="pricing">
         <div className="section-center" style={{marginBottom:44}}>
           <div className="section-eyebrow">Simple pricing</div>
@@ -606,7 +600,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
       <section className="testimonials" id="testimonials">
         <div className="section-center" style={{marginBottom:44}}>
           <div className="section-eyebrow">Store owners say</div>
@@ -631,7 +624,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="faq" id="faq">
         <div className="section-center" style={{marginBottom:44}}>
           <div className="section-eyebrow">Questions</div>
@@ -650,7 +642,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* CTA BANNER */}
       <div className="cta-banner">
         <h2>Your store deserves better<br/>than a notebook.</h2>
         <p>Full POS system — sales, inventory, GCash, reports, shifts — all in one.</p>
@@ -663,7 +654,6 @@ export default function App() {
         <p className="cta-guarantee"><i className="ti ti-shield-check" style={{color:'rgba(255,255,255,.4)',fontSize:13}}/> No credit card · No commitment · Setup in minutes</p>
       </div>
 
-      {/* FOOTER */}
       <footer>
         <div className="footer-top">
           <div className="footer-brand">
@@ -698,7 +688,6 @@ export default function App() {
         </div>
       </footer>
 
-      {/* TRIAL MODAL */}
       <TrialModal open={modalOpen} onClose={() => setModalOpen(false)}/>
     </>
   );
