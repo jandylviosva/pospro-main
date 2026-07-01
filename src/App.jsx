@@ -693,7 +693,7 @@ export default function App() {
       <TrialModal open={modalOpen} onClose={() => setModalOpen(false)}/>
 
       {/* Floating Messenger Button */}
-      <a
+     {/* <a
         href="https://m.me/profile.php?id=61572325662884"
         target="_blank"
         rel="noopener noreferrer"
@@ -720,7 +720,7 @@ export default function App() {
         <svg width="26" height="26" viewBox="0 0 36 36" fill="white" aria-label="Messenger">
           <path d="M18 2C9.163 2 2 8.71 2 17c0 4.445 1.897 8.447 4.962 11.337V34l4.805-2.64C13.012 31.77 15.463 32 18 32c8.837 0 16-6.71 16-15S26.837 2 18 2zm1.758 20.293l-4.076-4.34-7.956 4.34 8.748-9.293 4.176 4.34 7.856-4.34-8.748 9.293z"/>
         </svg>
-      </a>
+      </a> */}
     </>
   );
 }
